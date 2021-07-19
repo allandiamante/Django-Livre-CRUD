@@ -1,0 +1,35 @@
+{% extends 'modelo.html' %}
+
+{% load static %}
+
+{% block conteudo %}
+    <h1>Lista de campos registrados</h1>
+    <br>
+    <div class="table responsive"></div>
+        <table class="table table striped">
+            <tr>
+                <th>ID</th>
+                <th>Nome</th>
+                <th>Descrição</th>
+                <th>Opções</th>
+            </tr>
+            {% for campo in object_list %}
+            <tr>
+                <td>{{ campo.pk }}</td>
+                <td>{{ campo.nome }}</td>
+                <td>{{ campo.descricao }}</td>
+                <td>
+                    <a href="{% url 'editar-campo' campo.pk %}" class="btn btn-warning btn-sn" title="Editar">e</a>
+                    <a href="{% url 'excluir-campo' campo.pk %}" class="btn btn-danger btn-sn" title="Excluir">x</a>
+                   
+
+                </td>
+            </tr>
+            {% empty %}
+            <tr>
+                <td colspan="3"> Nenhum campo registrado</td>
+            </tr>
+            {% endfor %}
+    </table>
+</div>
+{% endblock %}

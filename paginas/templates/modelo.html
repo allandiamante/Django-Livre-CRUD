@@ -1,0 +1,178 @@
+{% load bootstrap4 %}
+{% load static %}
+<!DOCTYPE html>
+<html lang="pt-br">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        
+        {% block titulo %}
+        <title>Modelo</title>
+        {% endblock %}
+
+        <link rel="stylesheet" href="{% static 'css/style.css' %}">
+        {% bootstrap_css %}
+    </head>
+    <body>
+
+      {% block menu %}
+      <section class="header">
+          <div class="container">
+            <nav class="navbar navbar-expand-lg navbar-light">
+              <a class="navbar-brand" href="#" style="font-size: 10mm; font-weight: 900; font-style: oblique">Free-Django</a>
+              <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <i class="fa fa-bars"></i>
+              </button>
+              <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ml-auto text-right">
+                  <li class="nav-item ">
+                    <a class="nav-link active-home" href="{% url 'index' %}">INÍCIO</a>
+                  </li>
+                  <div class="dropdown">
+                    <li class="nav-item">
+                      <a class="nav-link dropdown-toggle" type="button" id="dropdownM" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        CONSULTA
+                      </a>
+                      <div class="dropdown-menu" aria-labelledby="dropdownM">
+                        <a class="dropdown-item"  href="http://127.0.0.1:8000/consulta/0">Planilha dos Produtos</a>
+                        <a class="dropdown-item" href="http://127.0.0.1:8000/produto">Adicionar Produto</a>
+                      </div>
+                    </li>
+                  </div>
+                  <li class="nav-item">
+                    <a class="nav-link" href="#">SOBRE NÓS</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="{% url 'sobre' %}">SOBRE</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="http://127.0.0.1:8000/admin">LOGIN</a>
+                  </li>
+                </ul>
+              </div>
+            </nav>
+            
+            </div>
+          </div>
+        </section>
+      {% endblock %}
+
+      {% block destaque %}
+      <center>
+        <div class="bg" id="header-secondary" ">
+            figuras de destaque
+        </div>
+      </center>
+      {% endblock %}
+
+      <div class="container">
+        {% block conteudo %}
+          <img src="{% static 'img/imglogo.png' %}">
+        {% endblock %}
+      </div> 
+      {% bootstrap_javascript jquery='full' %}
+    </body>
+    {% block rodape %}
+          
+          <!-- Footer -->
+    <footer class="page-footer font-small indigo" id="rodape0">
+
+        <!-- Footer Links -->
+        <div class="container text-center text-md-left" >
+      
+          <!-- Grid row -->
+          <div class="row">
+      
+            <!-- Grid column -->
+            <div class="col-md-3 mx-auto">
+      
+              <!-- Links -->
+              <h5 class="font-weight-bold text-uppercase mt-3 mb-4">Links</h5>
+      
+              <ul class="list-unstyled">
+                <li>
+                  <a href="#!">Very long link 1</a>
+                </li>
+                <li>
+                  <a href="#!">Very long link 2</a>
+                </li>
+                <li>
+                  <a href="#!">Very long link 3</a>
+                </li>
+                <li>
+                  <a href="#!">Very long link 4</a>
+                </li>
+              </ul>
+      
+            </div>
+            
+            <!-- Grid column -->
+      
+            <hr class="clearfix w-100 d-md-none">
+      
+            <!-- Grid column -->
+            <div class="col-md-3 mx-auto">
+      
+              <!-- Links -->
+              <h5 class="font-weight-bold text-uppercase mt-3 mb-4">Contatos</h5>
+      
+              <ul class="list-unstyled">
+                <li>
+                  <a href="#!">Link 1</a>
+                </li>
+                <li>
+                  <a href="#!">Link 2</a>
+                </li>
+                <li>
+                  <a href="#!">Link 3</a>
+                </li>
+                <li>
+                  <a href="#!">Link 4</a>
+                </li>
+              </ul>
+      
+            </div>
+            <!-- Grid column -->
+      
+            <hr class="clearfix w-100 d-md-none">
+      
+            <!-- Grid column -->
+            <div class="col-md-3 mx-auto">
+      
+              <!-- Links -->
+              <h5 class="font-weight-bold text-uppercase mt-3 mb-4">Serviços</h5>
+      
+              <ul class="list-unstyled">
+                <li>
+                  <a href="#!">Link 1</a>
+                </li>
+                <li>
+                  <a href="#!">Link 2</a>
+                </li>
+                <li>
+                  <a href="#!">Link 3</a>
+                </li>
+                <li>
+                  <a href="#!">Link 4</a>
+                </li>
+              </ul>
+      
+            </div>
+            <!-- Grid column -->
+      
+          </div>
+          <!-- Grid row -->
+      
+        </div>
+        <!-- Footer Links -->
+      
+        <!-- Copyright -->
+        <div class="footer-copyright text-center py-3" id="rodape1">© 2020 Copyright:
+          <a href="https://mdbootstrap.com/"> MDBootstrap.com</a>
+        </div>
+        <!-- Copyright -->
+      
+      </footer>
+      {% endblock %}
+</html>
