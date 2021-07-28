@@ -5,20 +5,32 @@
         <title>Formulário de Cadastro</title>
 {% endblock %}
 
+{% block destaque %}
+
+{% endblock %}
+
 {% block conteudo%}
-<h3>Cadastro</h3>
-<p class="lead">
-    preencha todos os campos obrigatórios
-</p>
+<div class="welcome-area" id="welcome" >
+    <!-- ***** Header Text Start ***** -->
+    <div class="header-text" style="margin-top: 9ch;">
+        <div class="container">
+            <h3>Cadastro</h3>
+            <p class="lead">
+                preencha todos os campos obrigatórios
+            </p>
 
-<hr>
+            <hr>
 
-<form action="" method="POST">    
-    {% csrf_token %}
+            <form action="" method="POST">    
+                {% csrf_token %}
 
-    {{ form.as_p }}
-    <button type="submit" class="btn btn-primary">Cadastrar</button>
+                {{ form.as_p }}
+                <button type="submit" class="btn btn-primary">Cadastrar</button>
 
-</form>
+            </form>
+        </div>
+    </div>
+    <!-- ***** Header Text End ***** -->
+</div>
 
 {% endblock %}

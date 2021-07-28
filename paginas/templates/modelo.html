@@ -11,202 +11,163 @@
         <title>Modelo</title>
         {% endblock %}
         {% bootstrap_css %}
-        
-        <link rel="stylesheet" href="{% static 'css/bootstrap.min.css' %}"/>
-        <link rel="stylesheet" href="{% static 'css/templatemo-diagoona.css' %}"/>
+          
+          
+      <link rel="stylesheet" href="{% static 'css/bootstrap.min.css' %}"/>
+      <link rel="stylesheet" href="{% static 'css/flex-slider.css' %}"/>
+      <link rel="stylesheet" href="{% static 'css/font-awesome.css' %}"/>
+      <link rel="stylesheet" href="{% static 'css/owl-carousel.css' %}"/>
+      <link rel="stylesheet" href="{% static 'css/templatemo-art-factory.css' %}"/>
+
     </head>
     <body>
 
+    <div id="preloader">
+      <div class="jumper">
+          <div></div>
+          <div></div>
+          <div></div>
+      </div>
+    </div>  
+
       {% block menu %}
       <section class="header">
-        <div class="container">        
-        <div>
-            <div class="tm-row pt-4">
-                <div class="tm-col-left">
-                    <div class="tm-site-header media">
-                        <i class="fas fa-umbrella-beach fa-3x mt-1 tm-logo"></i>
-                        <div class="media-body">
-                            <h1 class="tm-sitename text-uppercase">Diagoona</h1>
-                            <p class="tm-slogon">CRUD(com ClassBaseViews) + Template-Baixado</p>
-                        </div>        
-                    </div>
-                </div>
-                <div class="tm-col-right">
-                    <nav class="navbar navbar-expand-lg " id="tm-main-nav">
-                        <button class="navbar-toggler toggler-example mr-0 ml-auto" type="button" 
-                            data-toggle="collapse" data-target="#navbar-nav" 
-                            aria-controls="navbar-nav" aria-expanded="false" aria-label="Toggle navigation">
-                            <span><i class="fas fa-bars"></i></span>
-                        </button>
-                        <div class="collapse navbar-collapse tm-nav" id="navbar-nav">
-                            <ul class="navbar-nav text-uppercase">
-                                <li class="nav-item active">
-                                    <a class="nav-link tm-nav-link" href="{% url 'index' %}">Início <span class="sr-only">(current)</span></a>
-                                </li>
-                                <li class="nav-item">
-                                  <a class="nav-link dropdown-toggle" type="button" id="dropdownM" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                                    Cadastro
-                                  </a>
-                                  <div class="dropdown-menu" aria-labelledby="dropdownM">
-                                    <a class="dropdown-item"  href="{% url 'cadastrar-campo' %}">Cadastrar Campo</a>
-                                    <a class="dropdown-item" href="{% url 'cadastrar-atividade' %}">Cadastrar Atividade</a>
-                                  </div>    
-                                </li>
-
-                                <li class="nav-item">
-                                  <a class="nav-link dropdown-toggle" type="button" id="dropdownM" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                                    Planilha
-                                  </a>
-                                  <div class="dropdown-menu" aria-labelledby="dropdownM">
-                                    <a class="dropdown-item"  href="{% url 'listar-campos' %}">Listar Campo</a>
-                                    <a class="dropdown-item" href="{% url 'listar-atividades' %}">Listar Atividade</a>
-                                  </div>    
-                                </li>                            
-                                <li class="nav-item">
-                                    <a class="nav-link tm-nav-link" href="{% url 'contato' %}">Contato</a>
-                                </li>
-                            </ul>                            
-                        </div>                        
-                    </nav>
-                </div>
+        <header class="header-area header-sticky">
+          <div class="container">
+              <div class="row">
+                  <div class="col-12">
+                      <nav class="main-nav">
+                          <!-- ***** Logo Start ***** -->
+                          <a href="#" class="logo">Diamond</a>
+                          <!-- ***** Logo End ***** -->
+                          <!-- ***** Menu Start ***** -->
+                          <ul class="nav">
+                              <li class="scroll-to-section"><a href="{% url 'index' %}" class="active">Início</a></li>
+                              <li class="scroll-to-section"><a href="#about">Sobre</a></li>
+                              <li class="submenu">
+                                  <a href="javascript:;">Cadastro</a>
+                                  <ul>
+                                      <li><a href="{% url 'cadastrar-campo' %}">Cadastrar Campo</a></li>
+                                      <li><a href="{% url 'cadastrar-atividade' %}">Cadastrar Atividade</a></li>                                      
+                                  </ul>
+                              </li>
+                              <li class="submenu">
+                                <a href="javascript:;">Planilha</a>
+                                <ul>
+                                    <li><a href="{% url 'listar-campos' %}">Listar Campo</a></li>
+                                    <li><a href="{% url 'listar-atividades' %}">Listar Atividade</a></li>                                    
+                                </ul>
+                            </li>
+                              <li class="scroll-to-section"><a href="{% url 'contato' %}">Contate-Nos</a></li>
+                          </ul>
+                          <a class='menu-trigger'>
+                              <span>Menu</span>
+                          </a>
+                          <!-- ***** Menu End ***** -->
+                      </nav>
+                  </div>
+              </div>
+          </div>
+          <center>
+            <div class="bg" id="header-secondary" style="background-color: rgb(164, 229, 245);">
+                Diamond
             </div>
-        </section>
+          </center>
+      </header>
+      
+    </section>
         
       {% endblock %}
 
       {% block destaque %}
-      <center>
-        <div class="bg" id="header-secondary" ">
-            Diagoona
+        <div class="welcome-area" id="welcome">
+
+          <!-- ***** Header Text Start ***** -->
+          <div class="header-text">
+              <div class="container">
+                  <div class="row">
+                      <div class="left-text col-lg-6 col-md-6 col-sm-12 col-xs-12" data-scroll-reveal="enter left move 30px over 0.6s after 0.4s">
+                          <h1>CRUD + Template <strong>para você</strong></h1>
+                          <p></p>
+                          <a href="https://www.linkedin.com/in/allan-diamante/" class="main-button-slider">LinkedIn</a>
+                      </div>
+                      <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12" data-scroll-reveal="enter right move 30px over 0.6s after 0.4s">
+                          <img src="{% static 'images/slider-icon.png'%}" class="rounded img-fluid d-block mx-auto" alt="First Vector Graphic">
+                      </div>
+                  </div>
+              </div>
+          </div>
+          <!-- ***** Header Text End ***** -->
         </div>
-      </center>
+        <!-- ***** Welcome Area End ***** -->
+        
+      {% endblock %}
+      
+      {% block conteudo %}
+      <section class="section" id="about">
+        <div class="container">
+          <div class="row">
+              <div class="col-lg-7 col-md-12 col-sm-12" data-scroll-reveal="enter left move 30px over 0.6s after 0.4s">
+                  <img src="{% static 'images/left-image.png'%}" class="rounded img-fluid d-block mx-auto" alt="App">
+              </div>
+              <div class="right-text col-lg-5 col-md-12 col-sm-12 mobile-top-fix">
+                  <div class="left-heading">
+                      <h5>Vivamus sodales nisi id ante molestie venenatis</h5>
+                  </div>
+                  <div class="left-text">
+                      <p>This template is <a href="#">last updated on 20 August 2019 </a>for main menu drop-down arrow and sub menu text color. Duis auctor dolor eu scelerisque vestibulum. Vestibulum lacinia, nisl sit amet tristique condimentum. <br><br>
+                      Sed a consequat velit. Morbi lectus sapien, vestibulum et sapien sit amet, ultrices malesuada odio. Donec non quam euismod, mattis dui a, ultrices nisi.</p>
+                      <a href="{% url 'sobre' %}" class="main-button">Saiba mais</a>
+                  </div>
+              </div>
+          </div>
+          <div class="row">
+              <div class="col-lg-12">
+                  <div class="hr"></div>
+              </div>
+          </div>
+      </div>
+
+      </section>
+        
+        
       {% endblock %}
 
-      <div class="container">
-        {% block conteudo %}
-        <div class="tm-row">
-          <div class="tm-col-left"></div>
-          <main class="tm-col-right">
-              <section class="tm-content">
-                  <h2 class="mb-5 tm-content-title">Diagoona HTML Template</h2>
-                  <p class="mb-5">Diagoona is provided by TemplateMo website. You are allowed to use this template for your websites. You are NOT allowed to redistribute this template ZIP file for a download purpose on any template collection website.</p>
-                  <hr class="mb-5">
-                  <p class="mb-5">Diagoona is Bootstrap v4.4.1 layout. This BG is 50% transparent. You can set the background images auto play settings (true or false in line number 33) in templatemo-script.js file in js folder.</p>                        
-                  <a href="https://www.free-css.com/free-css-templates/page269/diagoona" class="btn btn-primary">Continue...</a>
-              </section>
-          </main>
- 
-        {% endblock %}
-      </div> 
       
-    </body>
+    
     {% block rodape %}
-          
-          <!-- Footer -->
-    <footer class="page-footer font-small indigo" id="rodape0">
-
-        <!-- Footer Links -->
-        <div class="container text-center text-md-left" >
-      
-          <!-- Grid row -->
+    <footer>
+      <div class="container">
           <div class="row">
-      
-            <!-- Grid column -->
-            <div class="col-md-3 mx-auto">
-      
-              <!-- Links -->
-              <h5 class="font-weight-bold text-uppercase mt-3 mb-4">Links</h5>
-      
-              <ul class="list-unstyled">
-                <li>
-                  <a href="#!">Very long link 1</a>
-                </li>
-                <li>
-                  <a href="#!">Very long link 2</a>
-                </li>
-                <li>
-                  <a href="#!">Very long link 3</a>
-                </li>
-                <li>
-                  <a href="#!">Very long link 4</a>
-                </li>
-              </ul>
-      
-            </div>
-            
-            <!-- Grid column -->
-      
-            <hr class="clearfix w-100 d-md-none">
-      
-            <!-- Grid column -->
-            <div class="col-md-3 mx-auto">
-      
-              <!-- Links -->
-              <h5 class="font-weight-bold text-uppercase mt-3 mb-4">Contatos</h5>
-      
-              <ul class="list-unstyled">
-                <li>
-                  <a href="#!">Link 1</a>
-                </li>
-                <li>
-                  <a href="#!">Link 2</a>
-                </li>
-                <li>
-                  <a href="#!">Link 3</a>
-                </li>
-                <li>
-                  <a href="#!">Link 4</a>
-                </li>
-              </ul>
-      
-            </div>
-            <!-- Grid column -->
-      
-            <hr class="clearfix w-100 d-md-none">
-      
-            <!-- Grid column -->
-            <div class="col-md-3 mx-auto">
-      
-              <!-- Links -->
-              <h5 class="font-weight-bold text-uppercase mt-3 mb-4">Serviços</h5>
-      
-              <ul class="list-unstyled">
-                <li>
-                  <a href="#!">Link 1</a>
-                </li>
-                <li>
-                  <a href="#!">Link 2</a>
-                </li>
-                <li>
-                  <a href="#!">Link 3</a>
-                </li>
-                <li>
-                  <a href="#!">Link 4</a>
-                </li>
-              </ul>
-      
-            </div>
-            <!-- Grid column -->
-      
+              <div class="col-lg-7 col-md-12 col-sm-12">
+                  <p class="copyright">Copyright &copy; 2020 Art Factory Company 
+              
+              . Design: <a rel="nofollow" href="https://templatemo.com">TemplateMo</a></p>
+              </div>
+              <div class="col-lg-5 col-md-12 col-sm-12">
+                  <ul class="social">
+                      <li><a href="#"><i class="fa fa-facebook"></i></a></li>
+                      <li><a href="#"><i class="fa fa-twitter"></i></a></li>
+                      <li><a href="#"><i class="fa fa-linkedin"></i></a></li>
+                      <li><a href="#"><i class="fa fa-rss"></i></a></li>
+                      <li><a href="#"><i class="fa fa-dribbble"></i></a></li>
+                  </ul>
+              </div>
           </div>
-          <!-- Grid row -->
-      
-        </div>
-        <!-- Footer Links -->
-      
-        <!-- Copyright -->
-        <div class="footer-copyright text-center py-3" id="rodape1">© 2020 Copyright:
-          <a href="https://mdbootstrap.com/"> MDBootstrap.com</a>
-        </div>
-        <!-- Copyright -->
-      
+      </div>
       </footer>
       {% endblock %}
       
       {% bootstrap_javascript jquery='full' %}
         
-      <script src="{% static 'js/jquery.backstretch.min.js' %}"></script>
+      <script src="{% static 'js/jquery-2.1.0.min.js' %}"></script>
+      <script src="{% static 'js/popper.js' %}"></script>
       <script src="{% static 'js/bootstrap.min.js' %}"></script>
-      <script src="{% static 'js/jquery-3.4.1.min.js' %}"></script>
-      <script src="{% static 'js/templatemo-script.js' %}"></script>
+      <script src="{% static 'js/owl-carousel.js' %}"></script>
+      <script src="{% static 'js/scrollreveal.min.js' %}"></script>
+      <script src="{% static 'js/waypoints.min.js' %}"></script>
+      <script src="{% static 'js/jquery.counterup.min.js' %}"></script>
+      <script src="{% static 'js/imgfix.min.js' %}"></script>
+      <script src="{% static 'js/custom.js' %}"></script>
+    </body>
 </html>

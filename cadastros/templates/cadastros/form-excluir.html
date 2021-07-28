@@ -1,26 +1,38 @@
 {% extends 'modelo.html' %}
 {% load static %}
 
+{% block destaque %}
+
+{% endblock %}
 
 {% block conteudo%}
-<h3>Excluir Registros</h3>
-<p class="lead">
-    Confirme para excluir o registro definitivamente.
-</p>
 
-<hr>
+<div class="welcome-area" id="welcome" >
+    <!-- ***** Header Text Start ***** -->
+    <div class="header-text">
+        <div class="container">
+        <h3>Excluir Registros</h3>
+        <p class="lead">
+            Confirme para excluir o registro definitivamente.
+        </p>
 
-<form action="" method="POST">    
+        <hr>
 
-    <p>
-        Deseja excluir o registro:<b> {{ object }} ?</b>
-    </p>
+        <form action="" method="POST">    
 
-    {% csrf_token %}
+            <p>
+                Deseja excluir o registro:<b> {{ object }} ?</b>
+            </p>
 
-    {{ form.as_p }}
-    <button type="submit" class="btn btn-danger">Excluir</button>
+            {% csrf_token %}
 
-</form>
+            {{ form.as_p }}
+            <button type="submit" class="btn btn-danger">Excluir</button>
+
+        </form>
+        </div>
+    </div>
+<!-- ***** Header Text End ***** -->
+</div>
 
 {% endblock %}
