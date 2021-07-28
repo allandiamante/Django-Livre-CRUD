@@ -1,5 +1,5 @@
-{% load bootstrap4 %}
 {% load static %}
+{% load bootstrap4 %}
 <!DOCTYPE html>
 <html lang="pt-br">
     <head>
@@ -10,68 +10,95 @@
         {% block titulo %}
         <title>Modelo</title>
         {% endblock %}
-
-        <link rel="stylesheet" href="{% static 'css/style.css' %}">
         {% bootstrap_css %}
+        
+        <link rel="stylesheet" href="{% static 'css/bootstrap.min.css' %}"/>
+        <link rel="stylesheet" href="{% static 'css/templatemo-diagoona.css' %}"/>
     </head>
     <body>
 
       {% block menu %}
       <section class="header">
-          <div class="container">
-            <nav class="navbar navbar-expand-lg navbar-light">
-              <a class="navbar-brand" href="#" style="font-size: 10mm; font-weight: 900; font-style: oblique">Free-Django</a>
-              <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-                <i class="fa fa-bars"></i>
-              </button>
-              <div class="collapse navbar-collapse" id="navbarNav">
-                <ul class="navbar-nav ml-auto text-right">
-                  <li class="nav-item ">
-                    <a class="nav-link active-home" href="{% url 'index' %}">INÍCIO</a>
-                  </li>
-                  <div class="dropdown">
-                    <li class="nav-item">
-                      <a class="nav-link dropdown-toggle" type="button" id="dropdownM" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                        CONSULTA
-                      </a>
-                      <div class="dropdown-menu" aria-labelledby="dropdownM">
-                        <a class="dropdown-item"  href="http://127.0.0.1:8000/consulta/0">Planilha dos Produtos</a>
-                        <a class="dropdown-item" href="http://127.0.0.1:8000/produto">Adicionar Produto</a>
-                      </div>
-                    </li>
-                  </div>
-                  <li class="nav-item">
-                    <a class="nav-link" href="#">SOBRE NÓS</a>
-                  </li>
-                  <li class="nav-item">
-                    <a class="nav-link" href="{% url 'sobre' %}">SOBRE</a>
-                  </li>
-                  <li class="nav-item">
-                    <a class="nav-link" href="http://127.0.0.1:8000/admin">LOGIN</a>
-                  </li>
-                </ul>
-              </div>
-            </nav>
-            
+        <div class="container">        
+        <div>
+            <div class="tm-row pt-4">
+                <div class="tm-col-left">
+                    <div class="tm-site-header media">
+                        <i class="fas fa-umbrella-beach fa-3x mt-1 tm-logo"></i>
+                        <div class="media-body">
+                            <h1 class="tm-sitename text-uppercase">Diagoona</h1>
+                            <p class="tm-slogon">CRUD(com ClassBaseViews) + Template-Baixado</p>
+                        </div>        
+                    </div>
+                </div>
+                <div class="tm-col-right">
+                    <nav class="navbar navbar-expand-lg " id="tm-main-nav">
+                        <button class="navbar-toggler toggler-example mr-0 ml-auto" type="button" 
+                            data-toggle="collapse" data-target="#navbar-nav" 
+                            aria-controls="navbar-nav" aria-expanded="false" aria-label="Toggle navigation">
+                            <span><i class="fas fa-bars"></i></span>
+                        </button>
+                        <div class="collapse navbar-collapse tm-nav" id="navbar-nav">
+                            <ul class="navbar-nav text-uppercase">
+                                <li class="nav-item active">
+                                    <a class="nav-link tm-nav-link" href="{% url 'index' %}">Início <span class="sr-only">(current)</span></a>
+                                </li>
+                                <li class="nav-item">
+                                  <a class="nav-link dropdown-toggle" type="button" id="dropdownM" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                    Cadastro
+                                  </a>
+                                  <div class="dropdown-menu" aria-labelledby="dropdownM">
+                                    <a class="dropdown-item"  href="{% url 'cadastrar-campo' %}">Cadastrar Campo</a>
+                                    <a class="dropdown-item" href="{% url 'cadastrar-atividade' %}">Cadastrar Atividade</a>
+                                  </div>    
+                                </li>
+
+                                <li class="nav-item">
+                                  <a class="nav-link dropdown-toggle" type="button" id="dropdownM" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                    Planilha
+                                  </a>
+                                  <div class="dropdown-menu" aria-labelledby="dropdownM">
+                                    <a class="dropdown-item"  href="{% url 'listar-campos' %}">Listar Campo</a>
+                                    <a class="dropdown-item" href="{% url 'listar-atividades' %}">Listar Atividade</a>
+                                  </div>    
+                                </li>                            
+                                <li class="nav-item">
+                                    <a class="nav-link tm-nav-link" href="{% url 'contato' %}">Contato</a>
+                                </li>
+                            </ul>                            
+                        </div>                        
+                    </nav>
+                </div>
             </div>
-          </div>
         </section>
+        
       {% endblock %}
 
       {% block destaque %}
       <center>
         <div class="bg" id="header-secondary" ">
-            figuras de destaque
+            Diagoona
         </div>
       </center>
       {% endblock %}
 
       <div class="container">
         {% block conteudo %}
-          <img src="{% static 'img/imglogo.png' %}">
+        <div class="tm-row">
+          <div class="tm-col-left"></div>
+          <main class="tm-col-right">
+              <section class="tm-content">
+                  <h2 class="mb-5 tm-content-title">Diagoona HTML Template</h2>
+                  <p class="mb-5">Diagoona is provided by TemplateMo website. You are allowed to use this template for your websites. You are NOT allowed to redistribute this template ZIP file for a download purpose on any template collection website.</p>
+                  <hr class="mb-5">
+                  <p class="mb-5">Diagoona is Bootstrap v4.4.1 layout. This BG is 50% transparent. You can set the background images auto play settings (true or false in line number 33) in templatemo-script.js file in js folder.</p>                        
+                  <a href="https://www.free-css.com/free-css-templates/page269/diagoona" class="btn btn-primary">Continue...</a>
+              </section>
+          </main>
+ 
         {% endblock %}
       </div> 
-      {% bootstrap_javascript jquery='full' %}
+      
     </body>
     {% block rodape %}
           
@@ -175,4 +202,11 @@
       
       </footer>
       {% endblock %}
+      
+      {% bootstrap_javascript jquery='full' %}
+        
+      <script src="{% static 'js/jquery.backstretch.min.js' %}"></script>
+      <script src="{% static 'js/bootstrap.min.js' %}"></script>
+      <script src="{% static 'js/jquery-3.4.1.min.js' %}"></script>
+      <script src="{% static 'js/templatemo-script.js' %}"></script>
 </html>
